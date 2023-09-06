@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()" color="danger">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+        
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="primary">RegistrAPP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-card style="background-color: #1E3888;">
+    <ion-card-header>
+      <ion-card-title>¡Logeaste!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form>
+        <ion-list>
+
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" placeholder="ejemplo@gmail.com"
+                       name="email" [(ngModel)]="usuario.email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input type="password" placeholder="741852963"
+                       name="password" [(ngModel)]="usuario.password"></ion-input>
+          </ion-item>
+
+        </ion-list>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="1"></ion-col>
+      <ion-col size="10">
+        <ion-button (click)="Enviar()" expand="block" fill="solid" color="warning" shape="round">
+          Ingresar.
+        </ion-button>
+        <ion-button routerLink="/inicio" expand="block" fill="solid" color="primary" shape="round">
+          Volver.
+          </ion-button>
+      </ion-col>
+      <ion-col size="1">
+        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
